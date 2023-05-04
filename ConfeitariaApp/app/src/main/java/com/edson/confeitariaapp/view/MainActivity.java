@@ -90,16 +90,20 @@ public class MainActivity extends AppCompatActivity {
 
         try {
             if (conn != null) {
-                if (!conn.isClosed())
+                if (!conn.isClosed()){
                     setTitle("CONEXAO REALIZADA COM SUCESSO");
-                else
+                System.out.println("MSG: CONEXAO REALIZADA COM SUCESSO");}
+                else{
                     setTitle("A CONEXÃO ESTÁ FECHADA");
+                System.out.println("MSG: A CONEXÃO ESTÁ FECHADA");}
             } else {
                 setTitle("CONEXAO NULA, NÃO REALIZADA");
+                System.out.println("MSG: CONEXAO NULA, NÃO REALIZADA");
             }
         } catch (java.sql.SQLException ex) {
             ex.printStackTrace();
             setTitle("CONEXÃO FALHOU!!!\n" + ex.getMessage());
+            System.out.println("MSG: CONEXÃO FALHOU!!!\n" + ex.getMessage());
         }
     }
 
