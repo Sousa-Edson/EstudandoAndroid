@@ -2,6 +2,7 @@ package com.edson.testandotelas.views;
 
 import android.os.Bundle;
 
+import com.edson.testandotelas.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
